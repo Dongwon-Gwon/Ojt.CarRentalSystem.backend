@@ -1,13 +1,12 @@
-package sk.ojt.backend.rentalinfo.repository;
+package sk.ojt.backend.user.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import sk.ojt.backend.rentalinfo.jpa.RentalInfo;
+import sk.ojt.backend.user.jpa.User;
 
 import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public interface RentalInfoRepository extends CrudRepository<RentalInfo, Long> {
-
+public interface UserRepository extends CrudRepository<User, Long> {
 }
