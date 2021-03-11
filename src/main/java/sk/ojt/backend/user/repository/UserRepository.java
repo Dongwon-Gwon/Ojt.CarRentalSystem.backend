@@ -6,8 +6,10 @@ import org.springframework.stereotype.Repository;
 import sk.ojt.backend.user.jpa.User;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
 public interface UserRepository extends JpaRepository<User, Long> {
+    List<User> findAll();
 }

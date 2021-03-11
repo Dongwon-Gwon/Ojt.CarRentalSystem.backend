@@ -1,11 +1,13 @@
 package sk.ojt.backend.user.jpa;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity(name = "user")
+@NoArgsConstructor
 public class User {
 
     @Id

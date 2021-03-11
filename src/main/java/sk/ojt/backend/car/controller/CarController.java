@@ -21,8 +21,17 @@ public class CarController {
         return service.getAllCarList();
     }
 
-    @PutMapping("/{carId}")
-    public List<Car> getRentedCarList(@PathVariable("carId") long carId, @RequestBody Car car){
+    @GetMapping("/test")
+    public String Test() {
+        List<Car> carList = service.getRentedCarList(2);
+        Car car = carList.get(0);
+        return car.getCarName();
+    }
+
+
+    @GetMapping("/{carId}")
+    public List<Car> getRentedCarList(@PathVariable Long carId) {
         return service.getRentedCarList(carId);
     }
+
 }

@@ -27,4 +27,12 @@ public class RentalInfoService {
         return repo.findByCarId(carId);
     }
 
+    public void saveRentalInfo(RentalInfo rentalInfo) {
+        repo.save(rentalInfo);
+    }
+
+    public void deleteRentalInfo(RentalInfo rentalInfo) {
+        repo.delete(rentalInfo);
+    }
+
 }

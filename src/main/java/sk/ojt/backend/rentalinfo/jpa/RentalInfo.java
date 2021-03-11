@@ -2,11 +2,13 @@ package sk.ojt.backend.rentalinfo.jpa;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity(name = "rental_info")
+@NoArgsConstructor
 public class RentalInfo {
 
     @Id

@@ -53,6 +53,15 @@ class CarRepositoryTest {
         System.out.println(car);
     }
 
+    @Test
+    void testSave() {
+
+        Car testCar = new Car(3L,"grandeur","hyundai");
+        carRepository.save(testCar);
+        List<Car> real = carRepository.findByCarId(3);
+        System.out.println(real);
+    }
+
 
 
 }

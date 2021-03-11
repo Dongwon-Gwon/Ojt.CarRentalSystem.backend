@@ -16,7 +16,6 @@ public class CarService {
         this.repo = repo;
     }
 
-
     public List<Car> getAllCarList() {
         return repo.findAll();
     }
