@@ -46,4 +46,13 @@ public class AdminService {
     public List<User> getAllUserInfos() {
         return userService.GetAllUserInfo();
     }
+
+    public RentalInfo saveRentalInfo(RentalInfo rentalInfo) {
+        return rentalInfoService.saveRentalInfo(rentalInfo);
+    }
+
+    public int deleteRentalInfo(long id) {
+        return rentalInfoService.deleteRentalInfo(id);
+    }
+
 }

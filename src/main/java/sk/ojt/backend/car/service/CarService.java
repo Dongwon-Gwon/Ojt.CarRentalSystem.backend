@@ -3,6 +3,7 @@ package sk.ojt.backend.car.service;
 import org.springframework.stereotype.Service;
 import sk.ojt.backend.car.jpa.Car;
 import sk.ojt.backend.car.repository.CarRepository;
+import sk.ojt.backend.rentalinfo.jpa.RentalInfo;
 
 import java.util.List;
 
@@ -20,7 +21,15 @@ public class CarService {
         return repo.findAll();
     }
 
-    public List<Car> getRentedCarList(long carId){
+    public List<Car> getRentedCarList(long carId) {
         return repo.findByCarId(carId);
+    }
+
+    public Car updateCar(Car car) {
+        return repo.save(car);
+    }
+
+    public int deleteCar(long id) {
+        return repo.deleteByCarId(id);
     }
 }

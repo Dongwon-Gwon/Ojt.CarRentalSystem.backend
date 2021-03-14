@@ -18,4 +18,7 @@ public interface RentalInfoRepository extends JpaRepository<RentalInfo, Long> {
 
     List<RentalInfo> findByCarId(long carId);
 
+    int deleteById(long id);
+
+    RentalInfo save(RentalInfo rentalInfo);
 }

@@ -61,4 +61,15 @@ public class UserService {
         return usableCarInfos;
     }
 
+    public User getUser(long userId) {
+        return userRepository.findByUserId(userId);
+    }
+
+    public User updateUser(User user) {
+        return userRepository.save(user);
+    }
+
+    public int deleteUser(long userId) {
+        return userRepository.deleteByUserId(userId);
+    }
 }

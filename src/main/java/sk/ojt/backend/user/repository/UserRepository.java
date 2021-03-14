@@ -12,4 +12,7 @@ import java.util.List;
 @Transactional
 public interface UserRepository extends JpaRepository<User, Long> {
     List<User> findAll();
+    User findByUserId(long userId);
+    User save(User user);
+    int deleteByUserId(long userId);
 }

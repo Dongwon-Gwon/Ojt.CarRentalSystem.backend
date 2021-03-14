@@ -17,15 +17,8 @@ public class CarController {
     }
 
     @GetMapping
-    public List<Car> getAllCarList() {
+    public List<Car> getCarList() {
         return service.getAllCarList();
-    }
-
-    @GetMapping("/test")
-    public String Test() {
-        List<Car> carList = service.getRentedCarList(2);
-        Car car = carList.get(0);
-        return car.getCarName();
     }
 
 
@@ -34,4 +27,13 @@ public class CarController {
         return service.getRentedCarList(carId);
     }
 
+    @PutMapping
+    public Car updateCar(@RequestBody Car car) {
+        return service.updateCar(car);
+    }
+
+    @DeleteMapping("{/carId}")
+    public int deleteCar(@PathVariable long carId) {
+        return service.deleteCar(carId);
+    }
 }

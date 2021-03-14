@@ -14,5 +14,8 @@ public interface CarRepository extends JpaRepository<Car, Long> {
 
     List<Car> findByCarId(long carId);
     List<Car> findAll();
+
+    Car save(Car car);
+    int deleteByCarId(long carId);
 }
 
