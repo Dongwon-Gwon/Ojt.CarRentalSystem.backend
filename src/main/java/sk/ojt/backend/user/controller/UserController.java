@@ -23,7 +23,7 @@ public class UserController {
         return service.GetAllUserInfo();
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/{userId}/car")
     public List<Car> getUsableCar(@PathVariable long userId) {
         return service.GetUsableCarInfo(userId);
     }

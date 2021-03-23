@@ -31,8 +31,8 @@ public class RentalInfoService {
         return repo.save(rentalInfo);
     }
 
-    public int deleteRentalInfo(long Id) {
-        return repo.deleteById(Id);
+    public int deleteRentalInfo(long id) {
+        return repo.deleteById(id);
     }
 
 }
