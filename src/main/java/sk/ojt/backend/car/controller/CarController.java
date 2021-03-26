@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/car")
+@CrossOrigin(origins = "http://localhost:4200")
 public class CarController {
 
     private CarService service;
@@ -32,7 +33,7 @@ public class CarController {
         return service.updateCar(car);
     }
 
-    @DeleteMapping("{/carId}")
+    @DeleteMapping("/{carId}")
     public int deleteCar(@PathVariable long carId) {
         return service.deleteCar(carId);
     }

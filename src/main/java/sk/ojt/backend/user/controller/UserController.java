@@ -19,13 +19,18 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getUserList() {
+    public List<User> getAllUser() {
         return service.GetAllUserInfo();
     }
 
     @GetMapping("/{userId}/car")
     public List<Car> getUsableCar(@PathVariable long userId) {
         return service.GetUsableCarInfo(userId);
+    }
+
+    @GetMapping("/{userId}/rent")
+    public List<Car> getRentedCar(@PathVariable long userId) {
+        return service.GetRentedCarInfo(userId);
     }
 
     @GetMapping("/{userId}")

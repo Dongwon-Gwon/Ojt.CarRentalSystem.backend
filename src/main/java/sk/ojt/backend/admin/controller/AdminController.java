@@ -23,8 +23,8 @@ public class AdminController {
 
 
     @GetMapping
-    public List<RentalInfo> getRentalInfo() {
-        return service.getAllRentalInfos();
+    public List<Admin> getAdmin() {
+        return service.getAllAdminList();
     }
 
     @PutMapping("/{id}")
