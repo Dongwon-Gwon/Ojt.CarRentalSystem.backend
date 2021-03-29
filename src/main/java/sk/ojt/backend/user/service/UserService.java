@@ -72,4 +72,5 @@ public class UserService {
     public int deleteUser(long userId) {
         return userRepository.deleteByUserId(userId);
     }
+    public int deleteRentalInfoByUserId(long userId){return rentalInfoService.deleteRentalInfoByUserId(userId);}
 }

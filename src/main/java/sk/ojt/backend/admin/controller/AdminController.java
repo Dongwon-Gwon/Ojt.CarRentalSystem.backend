@@ -28,7 +28,7 @@ public class AdminController {
         return service.getAllAdminList();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping
     public RentalInfo createRentalInfo(@RequestBody RentalInfo rentalInfo) {
         return service.saveRentalInfo(rentalInfo);
     }

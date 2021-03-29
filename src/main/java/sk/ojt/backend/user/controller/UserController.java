@@ -40,7 +40,7 @@ public class UserController {
         return service.getUser(userId);
     }
 
-    @PutMapping("/{userId}")
+    @PutMapping
     public User updateUser(@RequestBody User user) {
         return service.updateUser(user);
     }
@@ -48,5 +48,10 @@ public class UserController {
     @DeleteMapping("/{userId}")
     public int deleteUser(@PathVariable long userId) {
         return service.deleteUser(userId);
+    }
+
+    @DeleteMapping("/{userId}/rentalinfo")
+    public int deleteRentalInfoByUserId(@PathVariable long userId) {
+        return service.deleteRentalInfoByUserId(userId);
     }
 }

@@ -34,5 +34,6 @@ public class RentalInfoService {
     public int deleteRentalInfo(long id) {
         return repo.deleteById(id);
     }
+    public int deleteRentalInfoByUserId(long userId) { return repo.deleteByUserId(userId);}
 
 }

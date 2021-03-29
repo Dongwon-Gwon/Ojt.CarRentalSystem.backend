@@ -23,7 +23,7 @@ public class RentalInfoController {
         return service.getAllRentalInfo();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping
     public RentalInfo updateRentalInfo(@RequestBody RentalInfo rentalInfo) {
         return service.saveRentalInfo(rentalInfo);
     }
