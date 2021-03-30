@@ -55,4 +55,11 @@ public class AdminService {
         return rentalInfoService.deleteRentalInfo(id);
     }
 
+    public int deleteAdmin(long adminId) {
+        return repo.deleteByAdminId(adminId);
+    }
+    public Admin updateAdmin(Admin admin) {
+        return repo.save(admin);
+    }
+
 }

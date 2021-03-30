@@ -14,4 +14,6 @@ public interface AdminRepository extends JpaRepository<Admin, Long> {
     List<Admin> findByAdminId(long adminId);
     List<Admin> findAll();
 
+    Admin save(Admin admin);
+    int deleteByAdminId(long adminId);
 }

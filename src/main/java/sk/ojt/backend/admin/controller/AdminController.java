@@ -29,12 +29,12 @@ public class AdminController {
     }
 
     @PutMapping
-    public RentalInfo createRentalInfo(@RequestBody RentalInfo rentalInfo) {
-        return service.saveRentalInfo(rentalInfo);
+    public Admin updateAdmin(@RequestBody Admin admin) {
+        return service.updateAdmin(admin);
     }
 
-    @DeleteMapping("/{id}")
-    public int deleteRentalInfo(@PathVariable long id) {
-        return service.deleteRentalInfo(id);
+    @DeleteMapping("/{adminId}")
+    public int deleteAdmin(@PathVariable long adminId) {
+        return service.deleteAdmin(adminId);
     }
 }
