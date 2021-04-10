@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/rentalinfo")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class RentalInfoController {
 
     private RentalInfoService service;

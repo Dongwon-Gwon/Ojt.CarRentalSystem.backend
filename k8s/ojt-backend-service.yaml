@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: modeler-ojt
+spec:
+  selector:
+    app: backend
+    tier: backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080 
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service2
+  namespace: modeler-ojt
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080 
+  type: LoadBalancer
