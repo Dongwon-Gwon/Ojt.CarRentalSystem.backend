@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: backend
-          image: "gcr.io/accu-platform/modeler-ojt-backend:tag3"
+          image: "gcr.io/accu-platform/modeler-ojt-backend:tag5"
           ports:
             - containerPort: 8080
