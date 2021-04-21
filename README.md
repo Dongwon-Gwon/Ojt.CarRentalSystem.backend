@@ -4,7 +4,7 @@
 1. Car
 2. User
 3. Admin
-4. RentalInfo  
+4. RentalInfo
 
 ##사용 기술 스택 목록
 * Spring Boot
